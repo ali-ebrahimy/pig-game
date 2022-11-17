@@ -73,8 +73,8 @@ $box-shadow2: ();
 .pyro > .before,
 .pyro > .after {
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   box-shadow: $box-shadow2;
   @include animation(
