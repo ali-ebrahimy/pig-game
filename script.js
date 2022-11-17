@@ -68,7 +68,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       holdScore[activePlayer];
     //check if player >=150 =>win
-    if (holdScore[activePlayer] >= 2) {
+    if (holdScore[activePlayer] >= 100) {
       playing = false;
       document
         .querySelector(`.player--${activePlayer}`)
