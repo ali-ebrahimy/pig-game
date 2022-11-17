@@ -1,4 +1,4 @@
-$particles: 60;
+$particles: 10;
 $width: 500;
 $height: 400;
 
@@ -70,11 +70,18 @@ $box-shadow2: ();
   -ms-transform: $settings;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #003366;
+  overflow: hidden;
+}
+
 .pyro > .before,
 .pyro > .after {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 0.2rem;
+  height: 0.2rem;
   border-radius: 50%;
   box-shadow: $box-shadow2;
   @include animation(
