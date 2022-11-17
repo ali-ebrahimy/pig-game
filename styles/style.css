@@ -11,21 +11,43 @@ html {
   box-sizing: border-box;
 }
 
+/* ------------------- */
+
 body {
   font-family: 'Nunito', sans-serif;
   color: #333;
   font-weight: 400;
   height: 100vh;
-  background: rgb(99, 17, 134);
+  /* background: rgb(99, 17, 134);
   background: linear-gradient(
     331deg,
     rgba(99, 17, 134, 1) 17%,
     rgba(168, 27, 61, 1) 100%
+  ); */
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    -45deg,
+    rgb(49, 142, 185) 0%,
+    rgb(70, 89, 185) 25%,
+    rgb(110, 49, 133) 51%,
+    rgb(202, 44, 102) 100%
   );
+  animation: AnimateBG 20s ease infinite;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* LAYOUT */
@@ -170,47 +192,47 @@ main {
 }
 @media screen and (max-width: 764px) {
   main {
-    width: 32rem;
-    height: 30rem;
+    width: 35rem;
+    height: 39rem;
     border-radius: 10px;
   }
   .player {
     padding: 2rem;
   }
   .name {
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     word-spacing: 1px;
-    font-weight: 200;
+    font-weight: 400;
     margin-bottom: 0.5rem;
   }
   .score {
-    font-size: 3rem;
-    font-weight: 200;
+    font-size: 3.2rem;
+    font-weight: 400;
   }
   .btn {
-    font-size: 1rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 50rem;
   }
   .btn::first-letter {
-    font-size: 1rem;
+    font-size: 1.7rem;
     display: inline-block;
     margin-right: 0.3rem;
   }
   .btn--new {
-    top: 5rem;
+    top: 6rem;
   }
   .btn--roll {
-    top: 20.3rem;
+    top: 22.8rem;
   }
   .btn--hold {
-    top: 23.1rem;
+    top: 26.8rem;
   }
   .dice {
-    top: 10.5rem;
-    height: 5rem;
+    top: 12.5rem;
+    height: 7rem;
   }
   .current {
     width: 65%;
@@ -219,9 +241,9 @@ main {
   }
   .current-label {
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   .current-score {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }

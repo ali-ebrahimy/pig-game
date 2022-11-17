@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+.pyro > .before,
+.pyro > .after {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+}
+
+.pyro > .after {
+  -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+  animation-delay: 1.25s, 1.25s, 1.25s;
+  -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+  animation-duration: 1.25s, 1.25s, 6.25s;
+}
+
+@-webkit-keyframes bang {
+  to {
+    box-shadow: -54px -145.3333333333px hsl(282deg, 100%, 50%), 78px -141.3333333333px hsl(57deg, 100%, 50%), -169px -249.3333333333px hsl(22deg, 100%, 50%), 240px -248.3333333333px hsl(108deg, 100%, 50%), -93px -26.3333333333px hsl(192deg, 100%, 50%), -10px -110.3333333333px hsl(303deg, 100%, 50%), -201px -136.3333333333px hsl(2deg, 100%, 50%), -175px -102.3333333333px hsl(137deg, 100%, 50%), -110px -160.3333333333px hsl(4deg, 100%, 50%), -132px -260.3333333333px hsl(283deg, 100%, 50%), 231px -176.3333333333px hsl(265deg, 100%, 50%), -98px -269.3333333333px hsl(324deg, 100%, 50%), 118px -285.3333333333px hsl(98deg, 100%, 50%), -192px -154.3333333333px hsl(158deg, 100%, 50%), -25px -91.3333333333px hsl(315deg, 100%, 50%), -52px -4.3333333333px hsl(285deg, 100%, 50%), 96px -105.3333333333px hsl(348deg, 100%, 50%), -138px -39.3333333333px hsl(47deg, 100%, 50%), 27px -253.3333333333px hsl(315deg, 100%, 50%), 236px -206.3333333333px hsl(177deg, 100%, 50%), -214px 5.6666666667px hsl(173deg, 100%, 50%), -54px -239.3333333333px hsl(270deg, 100%, 50%), -220px -206.3333333333px hsl(345deg, 100%, 50%), -67px 24.6666666667px hsl(221deg, 100%, 50%), 146px -235.3333333333px hsl(263deg, 100%, 50%), -44px 65.6666666667px hsl(243deg, 100%, 50%), -219px -122.3333333333px hsl(286deg, 100%, 50%), -212px 28.6666666667px hsl(333deg, 100%, 50%), -33px -149.3333333333px hsl(219deg, 100%, 50%), 25px -272.3333333333px hsl(322deg, 100%, 50%), -60px -311.3333333333px hsl(336deg, 100%, 50%), 231px -255.3333333333px hsl(234deg, 100%, 50%), 0px -138.3333333333px hsl(27deg, 100%, 50%), 71px 25.6666666667px hsl(304deg, 100%, 50%), 13px -143.3333333333px hsl(293deg, 100%, 50%), -134px -247.3333333333px hsl(195deg, 100%, 50%), -149px -274.3333333333px hsl(287deg, 100%, 50%), 77px -226.3333333333px hsl(62deg, 100%, 50%), 197px -226.3333333333px hsl(209deg, 100%, 50%), -197px -20.3333333333px hsl(235deg, 100%, 50%), -91px -50.3333333333px hsl(258deg, 100%, 50%), -7px -312.3333333333px hsl(358deg, 100%, 50%), -112px -84.3333333333px hsl(227deg, 100%, 50%), 227px -69.3333333333px hsl(10deg, 100%, 50%), 25px -101.3333333333px hsl(189deg, 100%, 50%), 123px -12.3333333333px hsl(156deg, 100%, 50%), 17px -174.3333333333px hsl(301deg, 100%, 50%), 107px 16.6666666667px hsl(164deg, 100%, 50%), 47px -146.3333333333px hsl(284deg, 100%, 50%), 25px -180.3333333333px hsl(220deg, 100%, 50%), 1px -43.3333333333px hsl(346deg, 100%, 50%), 60px -70.3333333333px hsl(201deg, 100%, 50%), -191px -109.3333333333px hsl(48deg, 100%, 50%), -94px -164.3333333333px hsl(70deg, 100%, 50%), -213px -261.3333333333px hsl(110deg, 100%, 50%), -45px -154.3333333333px hsl(117deg, 100%, 50%), -150px -65.3333333333px hsl(82deg, 100%, 50%), 220px -63.3333333333px hsl(38deg, 100%, 50%), 57px 0.6666666667px hsl(175deg, 100%, 50%), 217px -71.3333333333px hsl(289deg, 100%, 50%), 177px 23.6666666667px hsl(97deg, 100%, 50%);
+  }
+}
+@keyframes bang {
+  to {
+    box-shadow: -54px -145.3333333333px hsl(282deg, 100%, 50%), 78px -141.3333333333px hsl(57deg, 100%, 50%), -169px -249.3333333333px hsl(22deg, 100%, 50%), 240px -248.3333333333px hsl(108deg, 100%, 50%), -93px -26.3333333333px hsl(192deg, 100%, 50%), -10px -110.3333333333px hsl(303deg, 100%, 50%), -201px -136.3333333333px hsl(2deg, 100%, 50%), -175px -102.3333333333px hsl(137deg, 100%, 50%), -110px -160.3333333333px hsl(4deg, 100%, 50%), -132px -260.3333333333px hsl(283deg, 100%, 50%), 231px -176.3333333333px hsl(265deg, 100%, 50%), -98px -269.3333333333px hsl(324deg, 100%, 50%), 118px -285.3333333333px hsl(98deg, 100%, 50%), -192px -154.3333333333px hsl(158deg, 100%, 50%), -25px -91.3333333333px hsl(315deg, 100%, 50%), -52px -4.3333333333px hsl(285deg, 100%, 50%), 96px -105.3333333333px hsl(348deg, 100%, 50%), -138px -39.3333333333px hsl(47deg, 100%, 50%), 27px -253.3333333333px hsl(315deg, 100%, 50%), 236px -206.3333333333px hsl(177deg, 100%, 50%), -214px 5.6666666667px hsl(173deg, 100%, 50%), -54px -239.3333333333px hsl(270deg, 100%, 50%), -220px -206.3333333333px hsl(345deg, 100%, 50%), -67px 24.6666666667px hsl(221deg, 100%, 50%), 146px -235.3333333333px hsl(263deg, 100%, 50%), -44px 65.6666666667px hsl(243deg, 100%, 50%), -219px -122.3333333333px hsl(286deg, 100%, 50%), -212px 28.6666666667px hsl(333deg, 100%, 50%), -33px -149.3333333333px hsl(219deg, 100%, 50%), 25px -272.3333333333px hsl(322deg, 100%, 50%), -60px -311.3333333333px hsl(336deg, 100%, 50%), 231px -255.3333333333px hsl(234deg, 100%, 50%), 0px -138.3333333333px hsl(27deg, 100%, 50%), 71px 25.6666666667px hsl(304deg, 100%, 50%), 13px -143.3333333333px hsl(293deg, 100%, 50%), -134px -247.3333333333px hsl(195deg, 100%, 50%), -149px -274.3333333333px hsl(287deg, 100%, 50%), 77px -226.3333333333px hsl(62deg, 100%, 50%), 197px -226.3333333333px hsl(209deg, 100%, 50%), -197px -20.3333333333px hsl(235deg, 100%, 50%), -91px -50.3333333333px hsl(258deg, 100%, 50%), -7px -312.3333333333px hsl(358deg, 100%, 50%), -112px -84.3333333333px hsl(227deg, 100%, 50%), 227px -69.3333333333px hsl(10deg, 100%, 50%), 25px -101.3333333333px hsl(189deg, 100%, 50%), 123px -12.3333333333px hsl(156deg, 100%, 50%), 17px -174.3333333333px hsl(301deg, 100%, 50%), 107px 16.6666666667px hsl(164deg, 100%, 50%), 47px -146.3333333333px hsl(284deg, 100%, 50%), 25px -180.3333333333px hsl(220deg, 100%, 50%), 1px -43.3333333333px hsl(346deg, 100%, 50%), 60px -70.3333333333px hsl(201deg, 100%, 50%), -191px -109.3333333333px hsl(48deg, 100%, 50%), -94px -164.3333333333px hsl(70deg, 100%, 50%), -213px -261.3333333333px hsl(110deg, 100%, 50%), -45px -154.3333333333px hsl(117deg, 100%, 50%), -150px -65.3333333333px hsl(82deg, 100%, 50%), 220px -63.3333333333px hsl(38deg, 100%, 50%), 57px 0.6666666667px hsl(175deg, 100%, 50%), 217px -71.3333333333px hsl(289deg, 100%, 50%), 177px 23.6666666667px hsl(97deg, 100%, 50%);
+  }
+}
+@-webkit-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+@keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+/* ------------------- */
+/* ====================== */
+body {
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  font-weight: 400;
+  height: 100vh;
+  /* background: rgb(99, 17, 134);
+  background: linear-gradient(
+    331deg,
+    rgba(99, 17, 134, 1) 17%,
+    rgba(168, 27, 61, 1) 100%
+  ); */
+  background-size: 300% 300%;
+  background-image: linear-gradient(-45deg, rgb(49, 142, 185) 0%, rgb(70, 89, 185) 25%, rgb(110, 49, 133) 51%, rgb(202, 44, 102) 100%);
+  -webkit-animation: AnimateBG 20s ease infinite;
+          animation: AnimateBG 20s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@-webkit-keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* LAYOUT */
+main {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  width: 100rem;
+  height: 60rem;
+  overflow: hidden;
+  display: flex;
+  border-radius: 19px;
+}
+
+.player {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 9rem;
+  transition: all 0.75s;
+}
+
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background-color: #c7365f;
+  width: 65%;
+  border-radius: 7px;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.8;
+  transition: all 0.75s;
+  color: #fff;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.btn--new {
+  top: 4rem;
+}
+
+.btn--roll {
+  top: 39.3rem;
+}
+
+.btn--hold {
+  top: 46.1rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+@media screen and (max-width: 764px) {
+  main {
+    width: 35rem;
+    height: 39rem;
+    border-radius: 10px;
+  }
+  .player {
+    padding: 2rem;
+  }
+  .name {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  .score {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  .btn {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 50rem;
+  }
+  .btn::first-letter {
+    font-size: 1.7rem;
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+  .btn--new {
+    top: 6rem;
+  }
+  .btn--roll {
+    top: 22.8rem;
+  }
+  .btn--hold {
+    top: 26.8rem;
+  }
+  .dice {
+    top: 12.5rem;
+    height: 7rem;
+  }
+  .current {
+    width: 65%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  .current-label {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .current-score {
+    font-size: 1.7rem;
+  }
+}/*# sourceMappingURL=file.css.map */

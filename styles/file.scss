@@ -1,0 +1,385 @@
+$particles: 60;
+$width: 500;
+$height: 400;
+
+// Create the explosion...
+$box-shadow: ();
+$box-shadow2: ();
+@for $i from 0 through $particles {
+  $box-shadow: $box-shadow,
+    random($width)-$width /
+      2 +
+      px
+      random($height)-$height /
+      1.2 +
+      px
+      hsl(random(360), 100, 50);
+  $box-shadow2: $box-shadow2, 0 0 #fff;
+}
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation-delay($settings) {
+  -moz-animation-delay: $settings;
+  -webkit-animation-delay: $settings;
+  -o-animation-delay: $settings;
+  -ms-animation-delay: $settings;
+  animation-delay: $settings;
+}
+
+@mixin animation-duration($settings) {
+  -moz-animation-duration: $settings;
+  -webkit-animation-duration: $settings;
+  -o-animation-duration: $settings;
+  -ms-animation-duration: $settings;
+  animation-duration: $settings;
+}
+
+@mixin animation($settings) {
+  -moz-animation: $settings;
+  -webkit-animation: $settings;
+  -o-animation: $settings;
+  -ms-animation: $settings;
+  animation: $settings;
+}
+
+@mixin transform($settings) {
+  transform: $settings;
+  -moz-transform: $settings;
+  -webkit-transform: $settings;
+  -o-transform: $settings;
+  -ms-transform: $settings;
+}
+
+.pyro > .before,
+.pyro > .after {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: $box-shadow2;
+  @include animation(
+    (
+      1s bang ease-out infinite backwards,
+      1s gravity ease-in infinite backwards,
+      5s position linear infinite backwards
+    )
+  );
+}
+
+.pyro > .after {
+  @include animation-delay((1.25s, 1.25s, 1.25s));
+  @include animation-duration((1.25s, 1.25s, 6.25s));
+}
+
+@include keyframes(bang) {
+  to {
+    box-shadow: $box-shadow;
+  }
+}
+
+@include keyframes(gravity) {
+  to {
+    @include transform(translateY(200px));
+    opacity: 0;
+  }
+}
+
+@include keyframes(position) {
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+/* ------------------- */
+
+/* ====================== */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-weight: 400;
+  height: 100vh;
+  /* background: rgb(99, 17, 134);
+  background: linear-gradient(
+    331deg,
+    rgba(99, 17, 134, 1) 17%,
+    rgba(168, 27, 61, 1) 100%
+  ); */
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    -45deg,
+    rgb(49, 142, 185) 0%,
+    rgb(70, 89, 185) 25%,
+    rgb(110, 49, 133) 51%,
+    rgb(202, 44, 102) 100%
+  );
+  animation: AnimateBG 20s ease infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* LAYOUT */
+main {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  width: 100rem;
+  height: 60rem;
+  overflow: hidden;
+  display: flex;
+  border-radius: 19px;
+}
+
+.player {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 9rem;
+
+  transition: all 0.75s;
+}
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background-color: #c7365f;
+  width: 65%;
+  border-radius: 7px;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.8;
+  transition: all 0.75s;
+  color: #fff;
+}
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.btn--new {
+  top: 4rem;
+}
+.btn--roll {
+  top: 39.3rem;
+}
+.btn--hold {
+  top: 46.1rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+@media screen and (max-width: 764px) {
+  main {
+    width: 35rem;
+    height: 39rem;
+    border-radius: 10px;
+  }
+  .player {
+    padding: 2rem;
+  }
+  .name {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  .score {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  .btn {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 50rem;
+  }
+  .btn::first-letter {
+    font-size: 1.7rem;
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+  .btn--new {
+    top: 6rem;
+  }
+  .btn--roll {
+    top: 22.8rem;
+  }
+  .btn--hold {
+    top: 26.8rem;
+  }
+  .dice {
+    top: 12.5rem;
+    height: 7rem;
+  }
+  .current {
+    width: 65%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  .current-label {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .current-score {
+    font-size: 1.7rem;
+  }
+}

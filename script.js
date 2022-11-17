@@ -73,6 +73,7 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
+      document.querySelector('main').classList.add('pyro');
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
